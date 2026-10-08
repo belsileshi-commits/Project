@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced to-do list by Belisti Sileshi">
+    <title>Pro Tasks | Belisti Sileshi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="app-header">
+            <div>
+                <h1>Pro Tasks</h1>
+                <p class="date" id="currentDate"></p>
+            </div>
+            <div class="header-actions">
+                <button class="icon-top" id="themeToggle" title="Toggle theme">🌙</button>
+                <button class="icon-top" id="helpBtn" title="Keyboard shortcuts">⌨️</button>
+                <button class="icon-top" id="menuToggle" title="Options">⋯</button>
+
+                <div class="dropdown" id="optionsMenu">
+                    <button id="exportBtn">📤 Export tasks</button>
+                    <button id="importBtn">📥 Import tasks</button>
+                    <button id="clearAllBtn" class="danger">🗑️ Clear all</button>
+                    <input type="file" id="importFile" accept=".json" hidden>
+                </div>
+            </div>
+        </header>
+
+        <!-- PROGRESS -->
+        <section class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text" id="progressText">0% completed</p>
+        </section>
+
+        <!-- INPUT -->
+        <section class="input-section">
+            <div class="main-input">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    maxlength="140"
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="btn-add">Add</button>
+            </div>
+
+            <div class="task-meta">
+                <select id="priorityInput" title="Priority">
+                    <option value="low">🟢 Low</option>
+                    <option value="medium" selected>🟡 Medium</option>
+                    <option value="high">🔴 High</option>
+                </select>
+
+                <input type="date" id="dueDateInput" title="Due date">
+
+                <select id="categoryInput" title="Category">
+                    <option value="">No category</option>
+                    <option value="Study">📚 Study</option>
+                    <option value="Work">💼 Work</option>
+                    <option value="Personal">🏠 Personal</option>
+                    <option value="Health">❤️ Health</option>
+                    <option value="Code">💻 Code</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- TOOLBAR -->
+        <section class="toolbar">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search tasks...">
+                <button id="clearSearch" class="clear-search" hidden>✕</button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Done</button>
+            </div>
+        </section>
+
+        <!-- CATEGORY FILTERS -->
+        <section class="category-filters" id="categoryFilters"></section>
+
+        <!-- STATS -->
+        <section class="stats">
+            <span id="taskCount">0 tasks</span>
+            <button id="clearCompleted" class="btn-clear-completed">Clear Completed</button>
+        </section>
+
+        <!-- TASK LIST -->
+        <ul class="task-list" id="taskList"></ul>
+
+        <!-- EMPTY STATE -->
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">✨</div>
+            <p class="empty-title">Nothing here yet</p>
+            <p class="empty-subtitle" id="emptySubtitle">Add your first task to get started</p>
+        </div>
+
+        <footer class="app-footer">
+            <p>💾 Auto-saved · Built by Belisti Sileshi</p>
+        </footer>
+    </main>
+
+    <!-- TOAST (Undo notifications) -->
+    <div class="toast" id="toast">
+        <span id="toastMessage">Task deleted</span>
+        <button id="toastUndo">Undo</button>
+    </div>
+
+    <!-- SHORTCUTS MODAL -->
+    <div class="modal" id="helpModal">
+        <div class="modal-content">
+            <h2>⌨️ Keyboard Shortcuts</h2>
+            <ul class="shortcuts-list">
+                <li><kbd>Enter</kbd> <span>Add task / Save edit</span></li>
+                <li><kbd>Esc</kbd> <span>Cancel edit / Close modal</span></li>
+                <li><kbd>Ctrl</kbd> + <kbd>F</kbd> <span>Focus search</span></li>
+                <li><kbd>Ctrl</kbd> + <kbd>D</kbd> <span>Toggle dark/light theme</span></li>
+                <li><kbd>Ctrl</kbd> + <kbd>Z</kbd> <span>Undo delete</span></li>
+                <li><kbd>/</kbd> <span>Focus task input</span></li>
+            </ul>
+            <button class="btn-primary" id="closeHelp">Got it</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

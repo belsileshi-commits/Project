@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Belisti Sileshi — Computer Science student and aspiring web developer based in Jimma, Ethiopia.">
+    <title>Belisti Sileshi | Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================
+         NAVIGATION
+         ============================ -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">BS<span class="logo-dot">.</span></a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ============================
+         HERO SECTION
+         ============================ -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-greeting">Hi, my name is</p>
+            <h1 class="hero-name">Belisti Sileshi.</h1>
+            <h2 class="hero-tagline">I build things for the web.</h2>
+            <p class="hero-description">
+                I am a 3rd-year Computer Science student at Jimma University with a passion
+                for building things for the web. I am also a Health Science student, which
+                gives me a unique perspective on how technology can solve real-world problems
+                in healthcare and beyond.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+
+        <div class="hero-photo">
+            <div class="photo-frame">
+                <img src="belisti.jpg" alt="Belisti Sileshi">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         ABOUT SECTION
+         ============================ -->
+    <section class="section" id="about">
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Hello! I'm Belisti, a developer based in Jimma, Ethiopia. My journey into
+                    web development started with curiosity about how websites work, and it has
+                    grown into a deep passion for creating clean, functional, and beautiful
+                    digital experiences.
+                </p>
+                <p>
+                    I am currently pursuing a BSc in Computer Science at Jimma University
+                    (graduating 2028) while also studying Health Science. This dual path has
+                    taught me to think across disciplines — understanding both the technical
+                    and human sides of any problem.
+                </p>
+                <p>
+                    When I'm not coding, you'll find me on stage acting, exploring new places,
+                    or meeting new people. I believe creativity and connection make me a
+                    better developer.
+                </p>
+
+                <ul class="about-facts">
+                    <li><strong>📍 Location:</strong> Jimma, Ethiopia</li>
+                    <li><strong>🎓 Education:</strong> BSc Computer Science, Jimma University</li>
+                    <li><strong>💼 Focus:</strong> Full-stack Web Development</li>
+                    <li><strong>🎭 Hobbies:</strong> Acting, Touring, Meeting people</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         SKILLS SECTION
+         ============================ -->
+    <section class="section" id="skills">
+        <h2 class="section-title">
+            Skills
+        </h2>
+
+        <div class="skills-container">
+            <div class="skills-column">
+                <h3 class="skills-heading">Technical</h3>
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java (basic)</li>
+                    <li>Git &amp; GitHub</li>
+                </ul>
+            </div>
+
+            <div class="skills-column">
+                <h3 class="skills-heading">Soft Skills</h3>
+                <ul class="skills-list">
+                    <li>Problem Solving</li>
+                    <li>Teamwork</li>
+                    <li>Fast Learner</li>
+                    <li>Communication</li>
+                    <li>Creativity</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         PROJECTS SECTION
+         ============================ -->
+    <section class="section" id="projects">
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+        <div class="projects-grid">
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-icon">🧮</span>
+                    <div class="project-links">
+                        <a href="projects/calculator/index.html" target="_blank" title="Live Demo">↗</a>
+                    </div>
+                </div>
+                <h3 class="project-title">Scientific Calculator</h3>
+                <p class="project-description">
+                    A full-featured scientific calculator with trigonometric functions (DEG/RAD modes),
+                    logarithms, powers, roots, factorials, memory storage (M+, M−, MR, MC), and full
+                    keyboard support. Built with vanilla JavaScript and a modern, responsive UI.
+                </p>
+                <ul class="project-tech">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Math API</li>
+                </ul>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-icon">📝</span>
+                    <div class="project-links">
+                        <a href="projects/todo/index.html" target="_blank" title="Live Demo">↗</a>
+                    </div>
+                </div>
+                <h3 class="project-title">Pro Tasks — To-Do List</h3>
+                <p class="project-description">
+                    An advanced task manager with priority levels, due dates with overdue warnings,
+                    category tags, live search, dark/light theme toggle, drag-to-reorder, undo delete,
+                    keyboard shortcuts, and JSON export/import. All data persists in the browser
+                    via localStorage.
+                </p>
+                <ul class="project-tech">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>LocalStorage</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ============================
+         CONTACT SECTION
+         ============================ -->
+    <section class="section" id="contact">
+        <h2 class="section-title">
+            Get In Touch
+        </h2>
+
+        <div class="contact-content">
+            <p class="contact-message">
+                I am currently open to internship opportunities, freelance projects, and
+                collaborations. Whether you have a question or just want to say hi, my
+                inbox is always open.
+            </p>
+
+            <a href="mailto:belistisileshi@gmail.com" class="btn btn-primary btn-large">
+                Say Hello
+            </a>
+
+            <div class="social-links">
+                <a href="https://github.com/belsileshi-commits" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:belistisileshi@gmail.com">
+                    <span>Email</span>
+                </a>
+                <a href="https://t.me/Bellsil" target="_blank" rel="noopener">
+                    <span>Telegram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         FOOTER
+         ============================ -->
+    <footer class="footer">
+        <p>Designed &amp; Built by Belisti Sileshi</p>
+        <p class="footer-year">© <span id="year"></span> All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
