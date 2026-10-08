@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator | Belisti Sileshi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+
+    <main class="calculator">
+        <header class="display">
+            <div class="status-bar">
+                <span class="mode" id="angleMode">DEG</span>
+                <span class="memory" id="memoryIndicator"></span>
+                <span class="second" id="secondIndicator">2nd</span>
+            </div>
+            <div class="history" id="history"></div>
+            <div class="result" id="result">0</div>
+        </header>
+
+        <section class="buttons">
+
+            <!-- Row 1: Second toggle + functions -->
+            <button class="btn btn-fn" data-action="toggle-second" id="secondBtn">2nd</button>
+            <button class="btn btn-fn" data-action="function" data-value="sin">sin</button>
+            <button class="btn btn-fn" data-action="function" data-value="cos">cos</button>
+            <button class="btn btn-fn" data-action="function" data-value="tan">tan</button>
+            <button class="btn btn-fn" data-action="function" data-value="log">log</button>
+
+            <!-- Row 2: Powers + roots -->
+            <button class="btn btn-fn" data-action="function" data-value="square">x²</button>
+            <button class="btn btn-fn" data-action="function" data-value="cube">x³</button>
+            <button class="btn btn-fn" data-action="function" data-value="power">xʸ</button>
+            <button class="btn btn-fn" data-action="function" data-value="sqrt">√</button>
+            <button class="btn btn-fn" data-action="function" data-value="cbrt">∛</button>
+
+            <!-- Row 3: Logs + constants -->
+            <button class="btn btn-fn" data-action="function" data-value="ln">ln</button>
+            <button class="btn btn-fn" data-action="function" data-value="tenpow">10ˣ</button>
+            <button class="btn btn-fn" data-action="function" data-value="exp">eˣ</button>
+            <button class="btn btn-fn" data-action="constant" data-value="pi">π</button>
+            <button class="btn btn-fn" data-action="constant" data-value="e">e</button>
+
+            <!-- Row 4: Misc + memory -->
+            <button class="btn btn-fn" data-action="function" data-value="inverse">1/x</button>
+            <button class="btn btn-fn" data-action="function" data-value="abs">|x|</button>
+            <button class="btn btn-fn" data-action="function" data-value="factorial">n!</button>
+            <button class="btn btn-memory" data-action="memory" data-value="add">M+</button>
+            <button class="btn btn-memory" data-action="memory" data-value="subtract">M−</button>
+
+            <!-- Row 5: Memory recall + clear + operators -->
+            <button class="btn btn-memory" data-action="memory" data-value="recall">MR</button>
+            <button class="btn btn-memory" data-action="memory" data-value="clear">MC</button>
+            <button class="btn btn-clear" data-action="clear">AC</button>
+            <button class="btn btn-clear" data-action="delete">DEL</button>
+            <button class="btn btn-operator" data-action="operator" data-value="/">÷</button>
+
+            <!-- Row 6: Numbers -->
+            <button class="btn" data-action="number" data-value="7">7</button>
+            <button class="btn" data-action="number" data-value="8">8</button>
+            <button class="btn" data-action="number" data-value="9">9</button>
+            <button class="btn btn-operator" data-action="operator" data-value="*">×</button>
+            <button class="btn btn-operator" data-action="operator" data-value="%">%</button>
+
+            <!-- Row 7 -->
+            <button class="btn" data-action="number" data-value="4">4</button>
+            <button class="btn" data-action="number" data-value="5">5</button>
+            <button class="btn" data-action="number" data-value="6">6</button>
+            <button class="btn btn-operator" data-action="operator" data-value="-">−</button>
+            <button class="btn btn-operator" data-action="parenthesis" data-value="(">(</button>
+
+            <!-- Row 8 -->
+            <button class="btn" data-action="number" data-value="1">1</button>
+            <button class="btn" data-action="number" data-value="2">2</button>
+            <button class="btn" data-action="number" data-value="3">3</button>
+            <button class="btn btn-operator" data-action="operator" data-value="+">+</button>
+            <button class="btn btn-operator" data-action="parenthesis" data-value=")">)</button>
+
+            <!-- Row 9 -->
+            <button class="btn" data-action="toggle-sign">±</button>
+            <button class="btn" data-action="number" data-value="0">0</button>
+            <button class="btn" data-action="number" data-value=".">.</button>
+            <button class="btn btn-equals" data-action="equals">=</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
